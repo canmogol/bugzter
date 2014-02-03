@@ -5,6 +5,7 @@
 *.jar
 
 # other files
+.DS_Store
 *.bak
 *~
 .gitignore
