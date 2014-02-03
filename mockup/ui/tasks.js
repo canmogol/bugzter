@@ -4,7 +4,6 @@ $(document).ready(function () {
     var toggle = $('.ui.toggle.button');
     // alias
     var handler = {
-
         activate: function () {
             if ($(this).hasClass('active')) {
                 $(this).removeClass('active');
@@ -12,10 +11,12 @@ $(document).ready(function () {
                 $(this).addClass('active');
             }
         }
-
     };
 
     toggle.on('click', handler.activate);
 
 
+    $('.ui.checkbox').each(function () {
+        $(this).checkbox();
+    });
 });

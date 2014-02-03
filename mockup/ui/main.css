@@ -217,3 +217,8 @@ i.icon.gutter {
 .low{
     color: #5e5e5e;
 }
+
+.ui.content.scroll{
+    max-height: 30em;
+    overflow: scroll;
+}
