@@ -208,17 +208,20 @@ i.icon.gutter {
     padding: 0 0 0 0;
 }
 
-.immediate{
+.immediate {
     color: #c02d43;
 }
-.moderate{
+
+.moderate {
     color: #000000;
 }
-.low{
+
+.low {
     color: #5e5e5e;
 }
 
-.ui.content.scroll{
+.ui.content.scroll {
     max-height: 20em;
     overflow: scroll;
 }
+

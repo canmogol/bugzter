@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Site Properities -->
+    <title>Main page</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700'
+          rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="../packaged/css/semantic.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <script src="jquery.2.0.3.js"></script>
+    <script src="../packaged/javascript/semantic.js"></script>
+    <script src="main.js"></script>
+    <script src="tasks.js"></script>
+
+</head>
+<body id="home">
+
+<header class="ui menu">
+    <a class="item" href="messages.html">
+        <i class="mail icon"></i> Messages
+    </a>
+    <a class="item" href="projects.html">
+        <i class="home icon"></i> Projects
+    </a>
+    <a class="item" href="tasks.html">
+        <i class="bug icon"></i> Tasks
+    </a>
+    <a class="item" href="calendar.html">
+        <i class="calendar icon"></i> Calendar
+    </a>
+    <a class="item" href="repositories.html">
+        <i class="code icon"></i> Repositories
+    </a>
+    <a class="item" href="builds.html">
+        <i class="hdd icon"></i> Builds
+    </a>
+    <a class="item" href="documents.html">
+        <i class="attachment icon"></i> Documents
+    </a>
+    <a class="active item" href="reports.html">
+        <i class="file icon"></i> Reports
+    </a>
+
+    <div class="right menu">
+        <a class="item">
+            <i class="settings icon"></i>
+        </a>
+
+        <div class="ui dropdown item">
+            Welcome John Doe <i class="dropdown icon"></i>
+
+            <div class="menu">
+                <a class="item"><i class="edit icon"></i> Edit Profile</a>
+                <a class="item"><i class="globe icon"></i> Choose Language</a>
+                <a class="item"><i class="settings icon"></i> Account Settings</a>
+                <a class="item"><i class="settings icon"></i> Log Out</a>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="ui grid">
+<nav class="three wide column">
+    <div class="ui vertical menu">
+        <div class="header item">
+            <i class="bug icon"></i>
+            Status
+        </div>
+        <a class="item">
+            All
+        </a>
+        <a class="active red item">
+            Enabled
+        </a>
+        <a class="item">
+            Disabled
+        </a>
+    </div>
+    <div class="ui vertical menu">
+        <div class="header item">
+            <i class="folder icon"></i>
+            Projects
+        </div>
+        <a class="item">
+            All Projects
+        </a>
+
+        <a class="active red item">
+            Tomorrow Bank
+        </a>
+
+        <div class="ui dropdown item">
+            Bank Sonar <i class="dropdown icon"></i>
+
+            <div class="menu">
+                <a class="item">Startup </a>
+                <a class="item">Second </a>
+                <a class="item">Third </a>
+                <a class="item">Last </a>
+            </div>
+        </div>
+        <a class="item">
+            Credit Unison
+        </a>
+        <a class="item">
+            BankTimes
+        </a>
+
+        <a class="item">
+            NYU
+        </a>
+        <a class="item">
+            ETHZ
+        </a>
+        <a class="item">
+            MIT
+        </a>
+        <a class="item">
+            Cambridge
+        </a>
+        <a class="item">
+            UNL
+        </a>
+        <a class="item">
+            iddaa
+        </a>
+    </div>
+</nav>
+<article class="thirteen wide column">
+
+<section class="ui segment">
+
+    <h2 class="ui header">
+        Tomorrow Bank (Enabled Reports)
+    </h2>
+
+    <table class="ui table segment">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Project</th>
+            <th>Description</th>
+            <th>Users</th>
+            <th>Task Type/State</th>
+            <th>Time</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>11</td>
+            <td>Tomorrow Bank</td>
+            <td>weekly report</td>
+            <td>John Doe, Lionel Coronas</td>
+            <td>Bug/Open</td>
+            <td>Every Week, Friday</td>
+            <td>
+                <div class="circular ui icon button">
+                    <i class="icon edit"></i>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Tomorrow Bank</td>
+            <td>monthly report</td>
+            <td>John Doe</td>
+            <td>All/All</td>
+            <td>Every Month, 1st Day</td>
+            <td>
+                <div class="circular ui icon button">
+                    <i class="icon edit"></i>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</section>
+<section class="">
+<div class="ui attached message">
+    <div class="header">
+        Add new report
+    </div>
+    <p>you may chose project, task, users and other options to create a report</p>
+</div>
+<form class="ui form attached fluid segment">
+
+<div class="ui grid">
+    <div class="row">
+        <div class="three wide column">
+            <div class="field">
+                <label>Project:</label>
+
+                <div class="ui selection dropdown">
+                    <input type="hidden" name="project">
+
+                    <div class="text"></div>
+                    <i class="dropdown icon"></i>
+
+                    <div class="menu">
+                        <div class="item active" data-value="0">All</div>
+                        <div class="item" data-value="1">Bank Sonar</div>
+                        <div class="item" data-value="2">Tomorrow Bank</div>
+                        <div class="item " data-value="3">Credit Unison</div>
+                        <div class="item " data-value="4">BankTimes</div>
+                        <div class="item " data-value="5">NYU</div>
+                        <div class="item " data-value="6">ETHZ</div>
+                        <div class="item " data-value="7">MIT</div>
+                        <div class="item " data-value="8">Cambridge</div>
+                        <div class="item " data-value="9">UNL</div>
+                        <div class="item " data-value="10">iddaa</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="three wide column">
+            <div class="field">
+                <label>Deliverable</label>
+
+                <div class="ui selection dropdown">
+                    <input type="hidden" name="deliverable  ">
+
+                    <div class="text"></div>
+                    <i class="dropdown icon"></i>
+
+                    <div class="menu">
+                        <div class="item active" data-value="0">All</div>
+                        <div class="item " data-value="1">Second</div>
+                        <div class="item " data-value="2">First</div>
+                        <div class="item " data-value="3">Third</div>
+                        <div class="item " data-value="4">Last</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ui grid">
+    <div class="row">
+        <div class="three wide column">
+            <div class="field">
+                <label>Task Type:</label>
+
+                <div class="ui selection dropdown">
+                    <input type="hidden" name="project">
+
+                    <div class="text"></div>
+                    <i class="dropdown icon"></i>
+
+                    <div class="menu">
+                        <div class="item active" data-value="0">All</div>
+                        <div class="item" data-value="1">Issue</div>
+                        <div class="item " data-value="2">Bug</div>
+                        <div class="item " data-value="3">Ticket</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="three wide column">
+            <div class="field">
+                <label>Task State:</label>
+
+                <div class="ui selection dropdown">
+                    <input type="hidden" name="deliverable  ">
+
+                    <div class="text"></div>
+                    <i class="dropdown icon"></i>
+
+                    <div class="menu">
+                        <div class="item active" data-value="0">All</div>
+                        <div class="item " data-value="1">Open</div>
+                        <div class="item " data-value="2">In Progress</div>
+                        <div class="item " data-value="2">Finished</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="three wide column">
+            <div class="field">
+                <label>Platform:</label>
+
+                <div class="ui selection dropdown">
+                    <input type="hidden" name="project">
+
+                    <div class="text">Android</div>
+                    <i class="dropdown icon"></i>
+
+                    <div class="menu">
+                        <div class="item active" data-value="0">All</div>
+                        <div class="item" data-value="1">Android</div>
+                        <div class="item" data-value="2">iOS</div>
+                        <div class="item " data-value="3">BlackBerry6</div>
+                        <div class="item " data-value="4">BlackBerry10</div>
+                        <div class="item " data-value="5">java-jar</div>
+                        <div class="item " data-value="6">java-war</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ui grid">
+    <div class="row">
+        <div class="three wide column">
+            <div class="field">
+                <label>Target</label>
+
+                <div class="ui selection dropdown">
+                    <input type="hidden" name="deliverable  ">
+
+                    <div class="text"></div>
+                    <i class="dropdown icon"></i>
+
+                    <div class="menu">
+                        <div class="item active" data-value="0">All</div>
+                        <div class="item" data-value="1">Development</div>
+                        <div class="item " data-value="2">Test</div>
+                        <div class="item " data-value="3">Production</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="three wide column">
+            <div class="field">
+                <div class="ui checkbox">
+                    <input type="checkbox" name="fun">
+                    <label>project description</label>
+                </div>
+            </div>
+            <div class="field">
+                <div class="ui checkbox">
+                    <input type="checkbox" name="fun">
+                    <label>calendar</label>
+                </div>
+            </div>
+        </div>
+        <div class="three wide column">
+            <div class="field">
+                <div class="ui checkbox">
+                    <input type="checkbox" name="fun">
+                    <label>iteration burn down</label>
+                </div>
+            </div>
+            <div class="field">
+                <div class="ui checkbox">
+                    <input type="checkbox" name="fun">
+                    <label>release burn down</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="field">
+    <label>Description:</label>
+    <input placeholder="single line description " type="text">
+</div>
+<div class="field">
+    <label>Send to:</label>
+    <input placeholder="Comma separated usernames" type="text">
+</div>
+<div class="ui grid">
+    <div class="row">
+        <div class="two wide column">
+            <div class="field">
+                <div class="ui checkbox">
+                    <input type="checkbox" name="fun">
+                    <label>Every day</label>
+                </div>
+            </div>
+        </div>
+        <div class="two wide column">
+            <div class="field">
+                <div class="ui checkbox">
+                    <input type="checkbox" name="fun">
+                    <label>Every week</label>
+                </div>
+            </div>
+        </div>
+        <div class="two wide column">
+            <div class="field">
+                <div class="ui checkbox">
+                    <input type="checkbox" name="fun">
+                    <label>Every month</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ui grid">
+    <div class="row">
+        <div class="three wide column">
+            <div class="field">
+                <input placeholder="hour of day (23:30)" type="text">
+            </div>
+        </div>
+        <div class="three wide column">
+            <div class="field">
+                <input placeholder="day of week (7)" type="text">
+            </div>
+        </div>
+        <div class="three wide column">
+            <div class="field">
+                <input placeholder="day of month (31)" type="text">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="ui blue submit button">Save</div>
+</form>
+</section>
+</article>
+</div>
+</body>
+</html>

@@ -30,7 +30,7 @@
     <a class="item" href="projects.html">
         <i class="home icon"></i> Projects
     </a>
-    <a class="active item" href="tasks.html">
+    <a class="item" href="tasks.html">
         <i class="bug icon"></i> Tasks
     </a>
     <a class="item" href="calendar.html">
@@ -39,7 +39,7 @@
     <a class="item" href="repositories.html">
         <i class="code icon"></i> Repositories
     </a>
-    <a class="item" href="builds.html">
+    <a class="active item" href="builds.html">
         <i class="hdd icon"></i> Builds
     </a>
     <a class="item" href="documents.html">
@@ -73,41 +73,18 @@
             <i class="bug icon"></i>
             Type
         </div>
-        <a class="item">
-            All Types
-        </a>
-        <a class="item">
-            Issue
-        </a>
         <a class="active red item">
-            Bug
+            All
         </a>
         <a class="item">
-            Ticket
-        </a>
-    </div>
-
-    <div class="ui vertical menu">
-        <div class="header item">
-            <i class="warning icon"></i>
-            State
-        </div>
-        <a class="active red item">
-            All States
+            Fail
         </a>
         <a class="item">
-            Open
+            Success
         </a>
         <a class="item">
-            In Progress
+            Warning
         </a>
-        <a class="item">
-            Testing
-        </a>
-        <a class="item">
-            Finished
-        </a>
-
     </div>
     <div class="ui vertical menu">
         <div class="header item">
@@ -164,72 +141,81 @@
 <section class="ui segment">
 
     <h2 class="ui header">
-        Bank Sonar - Second (All Bugs)
+        Bank Sonar - Second (All Builds)
     </h2>
 
     <table class="ui table segment">
         <thead>
         <tr>
             <th>#</th>
-            <th>Type</th>
-            <th>State</th>
-            <th>Subject</th>
-            <th>Assignee</th>
             <th>Platform</th>
+            <th>Target</th>
+            <th>Description</th>
+            <th>Time</th>
+            <th>Link</th>
             <th></th>
         </tr>
         </thead>
         <tbody>
-        <tr class="immediate">
-            <td>5047</td>
-            <td>Bug</td>
-            <td>Open</td>
-            <td>after successful logout, application redirects to login screen, it should be redirected to welcome
-                screen
-            </td>
-            <td>John Doe</td>
-            <td>Android, iOS</td>
-            <td>
-                <div class="circular ui icon button">
-                    <i class="icon edit"></i>
-                </div>
-            </td>
-        </tr>
-        <tr class="moderate">
-            <td>5048</td>
-            <td>Bug</td>
-            <td>Open</td>
-            <td>money transfer operation always returns success</td>
-            <td>John Doe</td>
+        <tr class="positive">
+            <td>56</td>
             <td>Android</td>
+            <td>Development</td>
+            <td>LightGap android build</td>
+            <td>30.01.2013 13:34 CET</td>
+            <td><a href="#">BankSonar.apk</a></td>
             <td>
                 <div class="circular ui icon button">
                     <i class="icon edit"></i>
                 </div>
             </td>
         </tr>
-        <tr class="moderate">
-            <td>5049</td>
-            <td>Bug</td>
-            <td>Testing</td>
-            <td>a session control should ask user after a predefined seconds if they want to logout or continue to
-                use the application
-            </td>
-            <td>John Doe</td>
-            <td>Android, iOS, WP8</td>
+        <tr class="positive">
+            <td>57</td>
+            <td>Android</td>
+            <td>Development</td>
+            <td>LightGap android build</td>
+            <td>31.01.2013 23:55 CET</td>
+            <td><a href="#">BankSonar.apk</a></td>
             <td>
                 <div class="circular ui icon button">
                     <i class="icon edit"></i>
                 </div>
             </td>
         </tr>
-        <tr class="low">
-            <td>5043</td>
-            <td>Bug</td>
-            <td>In Progress</td>
-            <td>there are no validations at change password</td>
-            <td>John Doe</td>
-            <td>Android, iOS</td>
+        <tr class="positive">
+            <td>58</td>
+            <td>Android</td>
+            <td>Test</td>
+            <td>For testing</td>
+            <td>01.02.2013 09:11 CET</td>
+            <td><a href="#">BankSonar.apk</a></td>
+            <td>
+                <div class="circular ui icon button">
+                    <i class="icon edit"></i>
+                </div>
+            </td>
+        </tr>
+        <tr class="warning">
+            <td>59</td>
+            <td>Android</td>
+            <td>Test</td>
+            <td>For testing</td>
+            <td>01.02.2013 12:23 CET</td>
+            <td><a href="#">BankSonar.apk</a></td>
+            <td>
+                <div class="circular ui icon button">
+                    <i class="icon edit"></i>
+                </div>
+            </td>
+        </tr>
+        <tr class="error">
+            <td>60</td>
+            <td>Android</td>
+            <td>Production</td>
+            <td>LightGap Android Release</td>
+            <td>01.02.2013 22:04 CET</td>
+            <td>---</td>
             <td>
                 <div class="circular ui icon button">
                     <i class="icon edit"></i>
@@ -242,9 +228,9 @@
 <section class="">
     <div class="ui attached message">
         <div class="header">
-            Add new task
+            Add new build
         </div>
-        <p>you may chose project, type and the state of the task</p>
+        <p>you may set platform, target and deploy path</p>
     </div>
     <form class="ui form attached fluid segment">
 
@@ -286,10 +272,10 @@
                             <i class="dropdown icon"></i>
 
                             <div class="menu">
-                                <div class="item active" data-value="0">Second </div>
-                                <div class="item " data-value="1">First </div>
-                                <div class="item " data-value="2">Third </div>
-                                <div class="item " data-value="3">Last </div>
+                                <div class="item active" data-value="0">Second</div>
+                                <div class="item " data-value="1">First</div>
+                                <div class="item " data-value="2">Third</div>
+                                <div class="item " data-value="3">Last</div>
                             </div>
                         </div>
                     </div>
@@ -299,108 +285,41 @@
 
         <div class="ui grid">
             <div class="row">
-                <div class="two wide column">
-                    <div class="field">
-                        <label>Type:</label>
-
-                        <div class="ui selection dropdown">
-                            <input type="hidden" name="type">
-
-                            <div class="text"></div>
-                            <i class="dropdown icon"></i>
-
-                            <div class="menu">
-                                <div class="item active" data-value="0">Issue</div>
-                                <div class="item " data-value="1">Bug</div>
-                                <div class="item " data-value="2">Ticket</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="three wide column">
-                    <div class="field">
-                        <label>Status:</label>
-
-                        <div class="ui selection dropdown">
-                            <input type="hidden" name="type">
-
-                            <div class="text"></div>
-                            <i class="dropdown icon"></i>
-
-                            <div class="menu">
-                                <div class="item active" data-value="0">Open</div>
-                                <div class="item " data-value="1">In Progress</div>
-                                <div class="item " data-value="2">Testing</div>
-                                <div class="item " data-value="3">Finished</div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-                <div class="four wide column">
                     <div class="field">
                         <label>Platform:</label>
 
-                        <div class="five fluid ui icon buttons">
-                            <div class="ui toggle button"><i class="android icon"></i></div>
-                            <div class="ui toggle button"><i class="apple icon"></i></div>
-                            <div class="ui toggle button"><i class="windows icon"></i></div>
-                            <div class="ui toggle button"><i class="browser icon"></i></div>
-                            <div class="ui toggle button"><i class="laptop icon"></i></div>
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="project">
+
+                            <div class="text">Android</div>
+                            <i class="dropdown icon"></i>
+
+                            <div class="menu">
+                                <div class="item active" data-value="0">Android</div>
+                                <div class="item" data-value="1">iOS</div>
+                                <div class="item " data-value="2">BlackBerry6</div>
+                                <div class="item " data-value="3">BlackBerry10</div>
+                                <div class="item " data-value="4">java-jar</div>
+                                <div class="item " data-value="4">java-war</div>
+                            </div>
                         </div>
                     </div>
-
                 </div>
-
-                <div class="four wide column">
-                    <div class="field">
-                        <label>Platform Tasks:</label>
-
-                        <div class="ui checkbox">
-                            <input type="checkbox" name="fun" checked id="platformSubTaskCheck">
-                            <label>Create sub-tasks for each platform</label>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="ui grid">
-            <div class="row">
                 <div class="three wide column">
                     <div class="field">
-                        <label>Assignee:</label>
+                        <label>Target</label>
 
                         <div class="ui selection dropdown">
-                            <input type="hidden" name="type">
+                            <input type="hidden" name="deliverable  ">
 
                             <div class="text"></div>
                             <i class="dropdown icon"></i>
 
                             <div class="menu">
-                                <div class="item" data-value="0">John Doe</div>
-                                <div class="item" data-value="1">Lionel Coronas</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="five wide column">
-                    <div class="field">
-                        <label>Parent Task:</label>
-
-                        <div class="ui selection dropdown">
-                            <input type="hidden" name="type">
-
-                            <div class="text"></div>
-                            <i class="dropdown icon"></i>
-
-                            <div class="menu">
-                                <div class="item active" data-value="0">NONE</div>
-                                <div class="item" data-value="1">5047 after successful logout</div>
-                                <div class="item" data-value="2">5048 money transfer operation</div>
-                                <div class="item " data-value="3">5049 a session control should ask</div>
-                                <div class="item " data-value="4">5043 there are no validations</div>
+                                <div class="item active" data-value="0">Development</div>
+                                <div class="item " data-value="1">Test</div>
+                                <div class="item " data-value="2">Production</div>
                             </div>
                         </div>
                     </div>
@@ -409,12 +328,13 @@
         </div>
 
         <div class="field">
-            <label>Subject:</label>
-            <input placeholder="short description" type="text">
+            <label>Deployment Path:</label>
+            <input placeholder="local path expected, to add a remote path, first mount it as local path, use smb like tools for that"
+                   type="text">
         </div>
         <div class="field">
-            <label>Content:</label>
-            <textarea placeholder="longer description of the task"></textarea>
+            <label>Description:</label>
+            <input placeholder="single line description of this build" type="text">
         </div>
         <div class="ui blue submit button">Save</div>
     </form>
