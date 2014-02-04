@@ -219,6 +219,6 @@ i.icon.gutter {
 }
 
 .ui.content.scroll{
-    max-height: 30em;
+    max-height: 20em;
     overflow: scroll;
 }
