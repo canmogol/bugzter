@@ -225,3 +225,40 @@ i.icon.gutter {
     overflow: scroll;
 }
 
+.ui.input.property {
+    width: 96%;
+    padding: 0.3em
+}
+
+.ui.input.property label {
+    display: block;
+}
+
+.ui.input.property input {
+    width: 100%;
+}
+
+.draggable {
+    width: 320px;
+    height: 480px;
+    padding: 0em;
+    border: 1px solid #000000;
+}
+
+.views {
+    min-height: 600px;
+    display: block;
+    overflow: scroll;
+}
+
+body {
+}
+
+#editor {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
