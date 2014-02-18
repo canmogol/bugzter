@@ -15,8 +15,7 @@ $(document).ready(function () {
         var addClass = article.columns[article.column];
         article.addClass(addClass);
     }
-
-
+    
     $('.variation .button')
         .on('click', function () {
             $(this)
@@ -73,8 +72,16 @@ $(document).ready(function () {
                 validateButton.removeClass("green");
                 clearInterval(validateButtonInterval);
             }, 500);
-            validationMessage.html("");
-            validationMessage.css("display", "none");
+
+
+            validationMessage.css("display", "block");
+            validationMessage.addClass("green");
+            validationMessage.html("Successful");
+            var validationErrorInterval = setInterval(function () {
+	        validationMessage.removeClass("green");
+	        clearInterval(validationErrorInterval);
+	    }, 3000);
+
         } catch (e) {
             validateButton.addClass("red");
             var validateButtonInterval = setInterval(function () {

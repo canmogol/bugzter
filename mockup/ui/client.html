@@ -12,12 +12,12 @@
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700'
           rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" type="text/css" href="../packaged/css/semantic.css">
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/css/semantic.css">
     <link rel="stylesheet" type="text/css" href="main.css">
 
-    <script src="jquery.2.0.3.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js"></script>
     <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-    <script src="../packaged/javascript/semantic.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.12.0/javascript/semantic.min.js"></script>
     <script src="main.js"></script>
     <script src="client.js"></script>
 
@@ -285,10 +285,10 @@
         <div class="ui grid">
             <div class="row">
                 <div class="four wide column">
-                    <button class="ui button" href="#" id="validate" value="validate code">validate code</button>
+                    <button class="ui button" href="#" id="validate" value="validate code">eval code</button>
                 </div>
-                <div class="eight wide column">
-                    <label class="ui label message" style="margin-top: 0.5em; display: none" id="validationMessage"></label>
+                <div class="ten wide column">
+                    <label class="ui message" style="display:none" id="validationMessage"></label>
                 </div>
             </div>
         </div>
@@ -312,9 +312,9 @@ MainController.prototype.doLogin = function () {
 
 
     <!-- load ace -->
-    <script src="http://ajaxorg.github.io/ace-builds/src-noconflict/ace.js"></script>
+    <script src="./src-noconflict/ace.js"></script>
     <!-- load ace language tools -->
-    <script src="http://ajaxorg.github.io/ace-builds/src-noconflict/ext-language_tools.js"></script>
+    <script src="./src-noconflict/ext-language_tools.js"></script>
     <script>
         // trigger extension
         ace.require("ace/ext/language_tools");
@@ -329,8 +329,6 @@ MainController.prototype.doLogin = function () {
         document.editor = editor;
     </script>
 
-    <script src="ace.js" type="text/javascript"
-            charset="utf-8"></script>
     <script>
         var editor = ace.edit("editor");
         editor.setTheme("ace/theme/xcode");
