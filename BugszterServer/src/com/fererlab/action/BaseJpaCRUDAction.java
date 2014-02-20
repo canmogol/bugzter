@@ -1,9 +1,7 @@
 package com.fererlab.action;
 
 import com.fererlab.db.EM;
-import com.fererlab.dto.Model;
-import com.fererlab.dto.Param;
-import com.fererlab.dto.ParamMap;
+import com.fererlab.dto.*;
 
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.*;

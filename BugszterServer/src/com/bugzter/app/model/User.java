@@ -54,7 +54,7 @@ public class User implements Model {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", serialNumber='" + username + '\'' +
+                ", username='" + username + '\'' +
                 '}';
     }
 }
