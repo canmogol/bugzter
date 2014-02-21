@@ -60,7 +60,11 @@ public class UserCRUDAction extends BaseJpaCRUDAction<User> {
         User user;
         if (request.getParams().containsKey("id")) {
             user = find(Long.valueOf(String.valueOf(request.getParams().getValue("id"))));
-            return Response.create(request, toContent(request, user), Status.STATUS_OK);
+            if (user == null) {
+                return NotFound(request, "no user found for this id", Header.STATUS_FAIL).toResponse();
+            } else {
+                return Ok(request).add("user", user).toResponse();
+            }
         } else {
             return NotFound(request, "param 'id' not found", Header.STATUS_FAIL).toResponse();
         }
