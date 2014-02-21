@@ -7,6 +7,8 @@ import com.fererlab.dto.*;
 import java.util.Date;
 import java.util.List;
 
+import static com.fererlab.dto.Header.STATUS_FAIL;
+
 public class UserCRUDAction extends BaseJpaCRUDAction<User> {
 
     public UserCRUDAction() {
@@ -26,7 +28,7 @@ public class UserCRUDAction extends BaseJpaCRUDAction<User> {
 
             if (userList.size() == 1) {
                 //return Ok(request).toResponse();
-                return Ok(request, "success", "welcome user")
+                return Ok(request, "welcome user")
                         .add("user", userList.get(0))
                         .add("name", userList.get(0).getUsername())
                         .toResponse();
@@ -59,7 +61,7 @@ public class UserCRUDAction extends BaseJpaCRUDAction<User> {
             user = find(Long.valueOf(String.valueOf(request.getParams().getValue("id"))));
             return Response.create(request, toContent(request, user), Status.STATUS_OK);
         } else {
-            return NotFound(request, null, "param 'id' not found").toResponse();
+            return NotFound(request, "param 'id' not found", STATUS_FAIL).toResponse();
         }
     }
 
