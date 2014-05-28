@@ -27,9 +27,10 @@ public class SupportCRUDAction<T extends Model> extends BaseAction {
 
     public Response find(Request request) {
         try {
+            ParamMap<String, Param<String, Object>> keyValuePairs = clearKeyValuePairs(request.getParams());
             return Response.create(
                     request,
-                    crudAction.toContent(request, crudAction.find(request.getParams().getValue("id"))),
+                    crudAction.toContent(request, crudAction.find(keyValuePairs.getValue("id"))),
                     Status.STATUS_OK
             );
         } catch (Exception e) {
@@ -76,10 +77,11 @@ public class SupportCRUDAction<T extends Model> extends BaseAction {
     }
 
     public Response delete(Request request) {
+        ParamMap<String, Param<String, Object>> keyValuePairs = clearKeyValuePairs(request.getParams());
         try {
             return Response.create(
                     request,
-                    crudAction.toContent(request, crudAction.delete(request.getParams().getValue("id"))),
+                    crudAction.toContent(request, crudAction.delete(keyValuePairs.getValue("id"))),
                     Status.STATUS_OK
             );
         } catch (Exception e) {
@@ -96,12 +98,12 @@ public class SupportCRUDAction<T extends Model> extends BaseAction {
                 int from = Integer.valueOf(fromToIds[0]);
                 int to = Integer.valueOf(fromToIds[1]);
                 for (int i = from; i <= to; i++) {
-                    ids.add(new Integer(i));
+                    ids.add(new Long(i));
                 }
             } else if (idsValue.lastIndexOf(",") != -1) {
                 String[] stringIds = idsValue.split(",");// 1,2,3,4
                 for (String id : stringIds) {
-                    ids.add(Integer.valueOf(id));
+                    ids.add(Long.valueOf(id));
                 }
             }
             return Response.create(

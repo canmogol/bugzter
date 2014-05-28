@@ -13,8 +13,8 @@ public class GenericAction extends BaseAction {
 
     public GenericAction() {
         //com.bugzter.app.action.GenericAction
-        String p1 = this.getClass().getPackage().getName().substring(0, this.getClass().getPackage().getName().lastIndexOf(".action"));
-        entityPackage = p1 + ".model";
+        String packageName = this.getClass().getPackage().getName().substring(0, this.getClass().getPackage().getName().lastIndexOf(".action"));
+        entityPackage = packageName + ".model";
     }
 
     public Response find(Request request) {
